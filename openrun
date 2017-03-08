@@ -1,0 +1,48 @@
+#!/bin/sh  
+ 
+ARG=$1
+
+getpid() {
+pidnum=$( netstat -antup | awk '/127.0.0.1:5000          0.0.0.0:*/{print $7}' | cut -d '/' -f1 )
+}
+
+killPid(){
+kill -9 `netstat -antup | awk '/127.0.0.1:5000          0.0.0.0:*/{print $7}' | cut -d '/' -f1` >/dev/null 2>&1
+}
+case   $ARG   in    
+
+start):
+nohup python /etc/opendhcp/openAutoIni.py  &  >/dev/null 2>&1
+getpid
+sleep 1
+if [ -n "$pidnum" ]; then
+echo "openrun has start PID is $pidnum"
+else
+echo "openrun failed to start"
+fi
+;;
+
+stop):  
+killPid
+killPid
+echo "openrun has stop"
+;;
+
+restart):  
+killPid
+killPid
+nohup python /etc/opendhcp/openAutoIni.py &   >/dev/null 2>&1
+getpid
+echo "openrun has restart PID is $pidnum"
+;;  
+
+
+status):
+getpid
+if [ -n "$pidnum" ]; then
+echo "openrun is running PID is $pidnum"
+else
+echo "openrun is stopped!"
+fi
+;;
+esac 
