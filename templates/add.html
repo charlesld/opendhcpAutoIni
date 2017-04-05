@@ -1,0 +1,18 @@
+<table border="1">
+
+{% for bb in bba %}
+
+        {% if loop.index is divisibleby 2 %}
+            
+        <td>{{ bb }}</td>
+        </tr>
+            {% else %}
+            <tr>
+            <td>{{ bb }}</td>
+            
+
+
+    {% endif %}
+{% endfor %}
+
+</table>
