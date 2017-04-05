@@ -7,7 +7,8 @@
 1. 通过有效IP地址生成相应网段的地址，截取dhcp pool需要的startIP stopIP Gateway
 1. 按序号生成配置文件，方便查看，opendhcp最大支持128个range，免得去数了
 1. 重启opendhcp 使配置生效
-1. 删改查功能未写，有谁做完了记得pppoe@139.com抄我一份
+1. 增加了查询功能
+1. 删改功能未写，有谁做完了记得pppoe@139.com抄我一份
 
 #### 安装步骤
 1. 解压openAutoIni.py到/etc/opendhcp/opendhcp目录（或随意相应openrun中未知也要改）
