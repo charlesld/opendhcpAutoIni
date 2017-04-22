@@ -11,7 +11,7 @@
 1. 删改功能未写，有谁做完了记得pppoe@139.com抄我一份
 
 #### 安装步骤
-1. 解压openAutoIni.py到/etc/opendhcp/opendhcp目录（或随意相应openrun中未知也要改）
+1. 解压openAutoIni.py到/etc/opendhcp/opendhcp目录（或随意相应openrun中位置也要改）
 1. 解压openrun到/etc/init.d/
 1. 执行 chmod a+x openrun
 1. 运行service openrun {start| stop| restart| status} 启动网页服务
