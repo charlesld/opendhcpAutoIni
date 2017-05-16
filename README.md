@@ -24,7 +24,7 @@
 1. 输入ip地址
 1. 输入掩码
 
-####生成示例
+#### 生成示例
 ```
 [RANGE_SET]
 #7@大大
@@ -56,3 +56,7 @@ SubnetMask=255.255.255.128
 Router=172.162.121.1
 AddressTime=172800
 ```
+#### 网页演示
+![添加地址页面](https://github.com/charlesld/opendhcpAutoIni/blob/master/dhcp1.jpg)
+
+![查询地址页面](https://github.com/charlesld/opendhcpAutoIni/blob/master/dhcp2.jpg)
